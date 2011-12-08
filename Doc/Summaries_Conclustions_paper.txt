@@ -1,19 +1,94 @@
-Toward an Experiment Engine for Lightweight Grids
+## Toward an Experiment Engine for Lightweight Grids
 
-The goals make an experience correct, reproducible and efficient. Needs in computer power which gives birth a Grid infrastructres. Grid 5000 project, was created to stury large and distributed systemsystems. Running experiments on such a large and distributed machine is a challenge.
+The goals make an experience correct, reproducible and efficient. 
+Needs in computer power which gives birth a Grid infrastructres. 
+Grid 5000 project, was created to study large and distributed systemsystems. Running experiments on such a large and distributed machine is a challenge.
 The number of nodes.
 the different hardware
 sorfware configurations
-different network topologies are as many parameters that can impact the result of the mesurement. To complex to take into account all the possible parameters
+Different network topologies are as many parameters that can impact the result of the mesurement. To complex to take into account all the possible parameters
 
 
 Problematics
 
-*A lot of parameters exists, some tahat users are not awere of, and they can be overlooked. so experiment desings have to accountfor this diversity, while remaining efficient.
+*A lot of parameters exists, some that users are not aware of, and they can be overlooked. 
+so experiment desings have to account for this diversity, while remaining efficient.
 
-*The satus of the platform ca of course be very difficult to grasp because the status of a single node can have a tremendous effect on the results. but interaction form other users via the network can also be disastrous.	
+*The satus of the platform of course be very difficult to grasp because the status of a single node can have a tremendous effect on the results. 
+but interaction form other users via the network can also be disastrous.	
 
 *The experimenter can easily do some things automatically or without thorough checking so experiments become very difficult to reproduce.
 
 *Last but not least, running and supervising an experiment distributed among several clusters is a difficult taks.
 
+
+Experiment engine Desing 
+
+Platform Status.
+Experiment Supervision.
+Experiment Reporducibility.
+
+
+
+
+
+## The NMI Build & Test Laboratory:
+## Continous Integration Framework for Distributed Computing software.
+
+Framework for building and testing software in a heterogeneous, multiuser, distributed computing environment.
+Test software as soon as possible in a automatically way in which the fails and bugs are easy to find.
+Users explicitly define the execution workflow of build-and-test procedures, along with software dependencies.
+The NMI Build & Test software stores this information in a central repository to ensure every build or test is reproducible.
+The framework is in charge of doing the tests on behalf of the user, making the interface between the user and the 
+underlying platforme.
+Runs on top of the Condor high-throughput distributed batch system.
+It is used as the primary build-and-test environment for the Globus toolkit and Condor batch system.
+They dont assure that each resource are configured identically. They dont use deployment.
+But even large pools of dedicated resources begin to resemble opportunistic pools as their capacity increases,
+since hardware failure is inevitable.
+The repository maintains routines's provenance infromation and historial data, 
+which can be used ofr statistical analysis of builds and tesis
+The NMI framework stores the execution results, log filse, environment infromation, and dependencies needed to reproduce the build or test.
+The primary focus of our frameworki is to enable software to be built and tested in a distributed batch computing environment.
+Take avantage of the condor capability to perform a good testing of software.
+As a future work implement the capability to  use and deploy a virtualimage enabling the application testing that requires privileged system access
+or which makes irreversible alterations to the system configuration.
+
+
+
+
+## Toward replayable research in networking and systems
+
+The increasin use of data repositories, testbeds, and experiment management ystems shows that
+the networking and systems research communities are moving in the direction of repeatability.
+Beyond encapsulating the definition and history of an experiment, a replayable experiment 
+is associated with a mechanism for actually re-executing a system under test.
+
+The apparition of data repositories, that support scientific conclusions.
+In the computer science field, repeatable research can be a surprisingly difficult challenge even for individual researchers.
+The networking community is already shifting to experiments based on tesbeds, driven by experiment-management systems,
+and interacting with repositores.
+
+
+
+### Deployment and Management of Large Planar Reflectarray Antennas Simulation on Grid
+
+Discribe the development of a tools use to deploy experiments in Grid infrastructures, validating it through the deployment
+of a Electromagnetic Simulation.
+Computational Electromagnetics is the science of numerically solving a complex set of Maxwell's equations using computer resources.
+These solutions describe the physical interactions and phenomena between charged particles and materials.
+Disings of radars, satellites, computer chips, etc.
+the resource requirements of popular electromagnetic analysis techniques exceed the supply of necessary resoruces.
+
+
+#### Xen and the Art of repeated research 
+
+They make three main conclusions about repeated research.
+First it is difficult enough that it should not be left as an exercise to the reader.
+Having another group repeat the initial results and polish some of the rough edges 
+it's important to the process of technology transfer.
+Second it provides important validation of publish results and can add additional insight beyond the original result.
+An indepedent third party is needed it to verify the reliability of results reported, to question which test are run 
+, and to highlight some of the "spit and bailing wire" still present in the system. Finally it is a great way to gain experience in research.
+They used the study as an example of repeated research and argue that this model of research, which is enabled by open source software,
+is an importat step in transferring the results of computer science research into the production environments.  
